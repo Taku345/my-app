@@ -5,10 +5,8 @@ const PulldownPanel = () => {
   
   return (
     <>
-      
         <AreaMenu/>
         <SubAreaMenu/>
-        {/* <PulldownMenu areaArray={areaArray}/> */}
     </>
   )
 }

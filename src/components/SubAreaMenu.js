@@ -1,16 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { initAreaWithStatus } from "../store/modules/area";
 import { getWeatherWithStatus } from "../store/modules/weather";
 
 
 const SubAreaMenu = () => {
   const dispatch = useDispatch();
-
   const subAreaArray = useSelector(state => state.area.subAreaArray);
 
   useEffect(()=>{
-    dispatch(getWeatherWithStatus(subAreaArray[0][0]))
+    if(subAreaArray.length > 0)dispatch(getWeatherWithStatus(subAreaArray[0][0]));
   },[subAreaArray])
 
   const handleChange = (e) => {

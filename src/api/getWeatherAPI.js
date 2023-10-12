@@ -7,14 +7,14 @@ const KYOTO = 260000;
 
 const getWeatherAPI = async (areaNum) => {
   // debugger;
-  console.log("API request send");
+  console.log("API getWeather request send");
   const res = await axios.get(`${WEATHER_URL}${areaNum}.json`);
   // debugger;
   return res;
 }
 const getAreaAPI = async () => {
   // debugger;
-  console.log("API request send");
+  console.log("API getArea request send");
   const res = await axios.get(AREA_URL);
   // debugger;
   return res;
