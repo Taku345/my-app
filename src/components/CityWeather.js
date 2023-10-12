@@ -10,10 +10,6 @@ const CityWeather = () => {
   const weathers = useSelector(state => state.weather.weathers);
 
 
-  const clickHandler = () => {
-    dispatch(getWeatherWithStatus('012000'));
-  }
-
   return (
     <div className="App">
     {status != "取得済"
