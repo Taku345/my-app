@@ -1,8 +1,6 @@
-import { useDispatch,useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const CityWeather = () => {
-  const dispatch = useDispatch();
-  // dispatch(getWeatherWithStatus());
   const status = useSelector(state => state.weather.status);
   const weathers = useSelector(state => state.weather.weathers);
   const timeArray = weathers[0]?.timeSeries[0].timeDefines;

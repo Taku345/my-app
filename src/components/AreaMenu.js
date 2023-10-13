@@ -1,12 +1,10 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { initAreaWithStatus, getSubArea } from "../store/modules/area";
-import { getWeatherWithStatus } from "../store/modules/weather";
 
 const AreaMenu = () => {
   const dispatch = useDispatch();
   const areaArray = useSelector(state => state.area.areaArray);
-  const subAreaArray = useSelector(state => state.area.subAreaArray);
 
   useEffect(()=>{
     dispatch(initAreaWithStatus());

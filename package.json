@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npx cross-env PORT=3002 react-scripts start",
+    "start": "set HOST=0.0.0.0&&set PORT=80&&react-scripts start",
     "build": "npx cross-env PORT=3002 react-scripts build",
     "test": "npx cross-env PORT=3002 react-scripts test",
     "eject": "npx cross-env PORT=3002 react-scripts eject"

@@ -16,8 +16,6 @@ const area = createSlice({
     areaObj:{},
     areaArray:[],
     subAreaArray:[],
-    // currentArea:'',
-    // currentSubArea:'',
     status:''
   },
   reducers: {
@@ -48,7 +46,6 @@ const area = createSlice({
       state.subAreaArray = firstSubAreaCode.map(code=> {
         return [code,state.areaObj.offices[code].name]
       })
-      //天気予報の初期化
     })
     .addCase(initAreaWithStatus.rejected,(state)=>{
       state.status = '情報取得エラー'
