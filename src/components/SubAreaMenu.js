@@ -7,6 +7,7 @@ const SubAreaMenu = () => {
   const dispatch = useDispatch();
   const subAreaArray = useSelector(state => state.area.subAreaArray);
 
+  // メインエリア変更と連動してサブエリアメニューが更新、それに合わせて予報を1つめのサブエリアで初期化する。
   useEffect(()=>{
     if(subAreaArray.length > 0)dispatch(getWeatherWithStatus(subAreaArray[0][0]));
   },[subAreaArray])
